@@ -36,7 +36,7 @@ const Home = () => {
     setPage(page);
     let limit = 9;
     axios
-      .get(`http://localhost:5000/products/${page}/${limit}`)
+      .get(`https://devashop.herokuapp.com/products/${page}/${limit}`)
       .then((result) => {
         console.log(result.data.products);
         setProduct(result.data.products);
@@ -51,7 +51,7 @@ const Home = () => {
 
   const getAllCategory = () => {
     axios
-      .get("http://localhost:5000/category")
+      .get("https://devashop.herokuapp.com/category")
       .then((result) => {
         setCategory(result.data.Category);
       })
@@ -62,7 +62,7 @@ const Home = () => {
 
   const filter = (categoryId) => {
     axios
-      .get("http://localhost:5000/products")
+      .get("https://devashop.herokuapp.com/products")
       .then((result) => {
         console.log(result.data.products);
         setProduct(result.data.products);
@@ -105,7 +105,7 @@ const Home = () => {
 
   const productPage = (productId) => {
     axios
-      .get(`http://localhost:5000/products/${productId}`)
+      .get(`https://devashop.herokuapp.com/products/${productId}`)
       .then((result) => {
         setProductDetails(result.data.product);
         setParam(productId);
@@ -120,7 +120,7 @@ const Home = () => {
 
   const searchProductByName = (searchInput) => {
     axios
-    .get("http://localhost:5000/products")
+    .get("https://devashop.herokuapp.com/products")
     .then((result) => {
       console.log(result.data.products);
       setProduct(result.data.products);
@@ -145,7 +145,7 @@ const Home = () => {
     console.log(id);
     await axios
       .post(
-        "http://localhost:5000/cart",
+        "https://devashop.herokuapp.com/cart",
         {
           productId: id,
           quantity: 1,

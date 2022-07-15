@@ -35,7 +35,7 @@ const ProductPage = () => {
     console.log(productId);
     axios
       .get(
-        `http://localhost:5000/products/${productId.id}`
+        `https://devashop.herokuapp.com/products/${productId.id}`
       ) /* .populate({path: 'feedBack',
       populate: {
         path: 'commenter',
@@ -55,7 +55,7 @@ const ProductPage = () => {
   const CreatFeedBack = () => {
     axios
       .post(
-        `http://localhost:5000/products/${productId.id}/feedback`,
+        `https://devashop.herokuapp.com/products/${productId.id}/feedback`,
         { feedBack },
         { headers: { authorization: `Bearer ${token}` } }
       )
@@ -74,7 +74,7 @@ const ProductPage = () => {
     console.log(id);
     axios
       .post(
-        "http://localhost:5000/cart",
+        "https://devashop.herokuapp.com/cart",
         {
           productId: id,
           quantity: 1,

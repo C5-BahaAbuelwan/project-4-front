@@ -24,7 +24,7 @@ const token=localStorage.getItem("token")
 const emptyCart = async () => {
   await axios
     .delete(
-      `http://localhost:5000/cart/${userId}`,
+      `https://devashop.herokuapp.com/cart/${userId}`,
 
       {
         headers: { authorization: `Bearer ${token}` },

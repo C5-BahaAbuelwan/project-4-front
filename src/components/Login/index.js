@@ -29,7 +29,7 @@ const Login = () => {
   const handleLogin = (response) => {
     console.log(response);
     axios
-      .post("http://localhost:5000/login/googlelogin", { response: response })
+      .post("https://devashop.herokuapp.com/login/googlelogin", { response: response })
       .then((response) => {
         console.log(response);
         setFirstName(response.data.firstName);
@@ -53,7 +53,7 @@ const Login = () => {
 
   const login = () => {
     axios
-      .post("http://localhost:5000/login/", {
+      .post("https://devashop.herokuapp.com/login/", {
         email,
         password,
       })

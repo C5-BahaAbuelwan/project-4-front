@@ -17,7 +17,7 @@ export const Register = () => {
   const role = "627cd37b12dec5d82be6786a";
   const addUser = () => {
     axios
-      .post("http://localhost:5000/users/", {
+      .post("https://devashop.herokuapp.com/users/", {
         email,
         password,
         country,

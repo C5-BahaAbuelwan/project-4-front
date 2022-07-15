@@ -43,7 +43,7 @@ const Cart = () => {
     console.log("token in cart", token.userId);
 
     await axios
-      .get(`http://localhost:5000/cart/${userId}`, {
+      .get(`https://devashop.herokuapp.com/cart/${userId}`, {
         headers: { authorization: `Bearer ${token}` },
       })
       .then((result) => {
@@ -60,7 +60,7 @@ const Cart = () => {
     if (!token) return alert("Please login to continue buying");
     await axios
       .post(
-        "http://localhost:5000/cart",
+        "https://devashop.herokuapp.com/cart",
         {
           productId: id,
           quantity: quantity,
@@ -84,7 +84,7 @@ const Cart = () => {
   const emptyCart = async () => {
     await axios
       .delete(
-        `http://localhost:5000/cart/${userId}`,
+        `https://devashop.herokuapp.com/cart/${userId}`,
 
         {
           headers: { authorization: `Bearer ${token}` },
@@ -110,7 +110,7 @@ const Cart = () => {
   const removeItemFromCart = async (productId) => {
     await axios
       .post(
-        `http://localhost:5000/cart/${userId}/product`,
+        `https://devashop.herokuapp.com/cart/${userId}/product`,
         { productId: productId },
         {
           headers: { authorization: `Bearer ${token}` },
