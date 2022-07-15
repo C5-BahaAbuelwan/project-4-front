@@ -24,7 +24,7 @@ import {
 import React, { useContext, useState, useEffect } from "react";
 import axios from "axios";
 import StripePaymentForm from "./stripe";
-import PaypalButton from "./PayPal"; 
+import PaypalButton from "./PayPal";
 //
 
 const Cart = () => {
@@ -58,6 +58,8 @@ const Cart = () => {
 
   const addToCart = async (id, quantity) => {
     if (!token) return alert("Please login to continue buying");
+    console.log(quantity,id);
+
     await axios
       .post(
         "https://devashop.herokuapp.com/cart",
@@ -72,12 +74,9 @@ const Cart = () => {
         setItem(result.data);
         setCarts(result.data.items);
         getCartItem();
-        // console.log(carts);
-        // setPayloader(result.data);
       })
       .catch((err) => {
         console.log(err);
-        // setError(err);
       });
   };
 
@@ -100,12 +99,11 @@ const Cart = () => {
       });
   };
 
- /*  const tranSuccess = async(payment) => {
+  /*  const tranSuccess = async(payment) => {
     const {paymentID, address} = payment;
 
     await axios.post('/api/payment', {carts, paymentID, address})
   } */
-
 
   const removeItemFromCart = async (productId) => {
     await axios
@@ -129,24 +127,22 @@ const Cart = () => {
         console.log(err);
       });
   };
-const product={
-  name: "Tesla Roadster",
+  const product = {
+    name: "Tesla Roadster",
     price: 64998.67,
-    description: "Cool car"
-}
+    description: "Cool car",
+  };
   async function handleToken(token, addresses) {
     const response = await axios.post(
       "https://ry7v05l6on.sse.codesandbox.io/checkout",
-      { token ,product}
+      { token, product }
     );
     const { status } = response.data;
     console.log("Response:", response.data);
     setCarts([]);
-      setItem("");
+    setItem("");
     if (status === "success") {
-      
       toast("Success! Check email for details", { type: "success" });
-      
     } else {
       toast("Something went wrong", { type: "error" });
     }
@@ -240,22 +236,18 @@ const product={
           {" "}
           Empty Cart
         </button>
-        
-        
-        
+
         <StripeCheckout
-        stripeKey="pk_test_51L0Yh4Cs43O88ha5zuVOO867HGTxbxH6Ej639RXS8Ju0Zg06rpUSbaJvJv100cHUAAfraHXPebVmBxhlEtgb2EO400ij2HLEBA"
-        token={handleToken}
-        // amount={product.price * 100}
-        name="DEVA $HOP"
-        billingAddress
-        shippingAddress
-      />
-      
+          stripeKey="pk_test_51L0Yh4Cs43O88ha5zuVOO867HGTxbxH6Ej639RXS8Ju0Zg06rpUSbaJvJv100cHUAAfraHXPebVmBxhlEtgb2EO400ij2HLEBA"
+          token={handleToken}
+          // amount={product.price * 100}
+          name="DEVA $HOP"
+          billingAddress
+          shippingAddress
+        />
       </div>
     </div>
   );
 };
 
 export default Cart;
-
