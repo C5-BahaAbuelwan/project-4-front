@@ -189,7 +189,7 @@ const Home = () => {
             }
           >
             <option>select</option>
-            {category.map((element, index) => {
+            {category&&category.map((element, index) => {
               return (
                 <option key={index} value={element._id}>
                   {element.title}
@@ -226,7 +226,7 @@ const Home = () => {
           filterArray.length === 0 ? (
             <div className="product_container">
               {product ? (
-                product.map((element, index) => {
+                product&&product.map((element, index) => {
                   // console.log(product);
                   return (
                     <div className="ProductHome" key={index}>
@@ -270,7 +270,7 @@ const Home = () => {
             </div>
           ) : (
             <div className="product_container">
-              {filterArray.map((element, index) => {
+              {filterArray&&filterArray.map((element, index) => {
                 return (
                   <div
                     className="ProductHome"
@@ -316,7 +316,7 @@ const Home = () => {
           )
         ) : (
           <div className="product_container">
-            {searchArray.map((element, index) => {
+            {searchArray&&searchArray.map((element, index) => {
               return (
                 <div className="product_container">
                   <div
@@ -363,7 +363,7 @@ const Home = () => {
         )
       ) : (
         <div className="product_container">
-          {productSorted.map((element, index) => {
+          {productSorted&&productSorted.map((element, index) => {
             return (
               <div className="ProductHome" key={index}>
                 <img src={element.image} className="productImage" />
