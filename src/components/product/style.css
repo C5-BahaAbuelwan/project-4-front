@@ -1,0 +1,114 @@
+.ProductPage {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 50px;
+  font-size: 150%;
+}
+.image {
+  max-width: 400px;
+  width: 100%;
+  margin: 20px;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+}
+.detailsAndImage {
+  max-width: 500px;
+  width: 100%;
+  margin: 5px 20px;
+}
+.detailsAndImage .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.detailsAndImage h2 {
+  text-transform: uppercase;
+  color: darkblue;
+  letter-spacing: 2px;
+  font-weight: 2rem;
+}
+.detailsAndImage p {
+  line-height: 1.5;
+  margin: 10px 0;
+  opacity: 0.8;
+}
+.detailsAndImage .AddToCart {
+  background: #333;
+  color: white;
+  margin-top: 10px;
+  padding: 10px 25px;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  bottom: 0%;
+}
+.Price {
+  color: crimson;
+}
+.feedBack-Product {
+  position: relative;
+  border: 1px solid #ccc;
+  transform: scaleY(0.98);
+  width: 60%;
+  background-color:#74dfdf17;
+margin-top: 5%;
+}
+.feedBack-Product h5 {
+  color: crimson;
+  text-align: center;
+  font-size: 2rem;
+  font-family: fantasy;
+  margin-top: 20px;
+  
+  
+}
+.feedBack-Product input{
+    width: 65%;
+    margin: 3%;
+    height: 8vh;
+    font-size: 20px;
+}
+.feedBack-Product button{
+    width: max-content;
+    margin: 3%;
+    height: 8vh;
+    background-color: crimson;
+    font-size: 1.2rem;
+    padding: 10px;
+    color: white;
+
+
+    
+}
+.feed {
+  padding: 2%;
+  position: relative;
+  border: 1px solid #ccc;
+  transform: scaleY(0.98);
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.feed p {
+  font-family: cursive;
+
+}
+
+.feed h4 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: teal;
+  
+}
+.feedBack-Product h3 {
+  text-align: center;
+  color: #ccc;
+}
+
+
+

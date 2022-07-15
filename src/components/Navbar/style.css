@@ -1,0 +1,33 @@
+.Navigation h4 {
+  text-align: center;
+}
+
+.Navigation h1 {
+  color: teal;
+  font-family: fantasy;
+  font-size: xx-large;
+  border: double gainsboro;
+  padding: 3px;
+}
+
+.Navigation span{
+    color: rgba(220, 20, 60, 0.808);
+    font-family: fantasy;
+  font-size: x-large
+
+}
+
+.Navigation h4 {
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    width: 30%;
+    /* border-bottom: solid    ; */
+}
+
+.Navigation .Nam{
+    color: gainsboro;
+    font-family: 'Times New Roman', Times, serif;
+  font-size: large
+
+}

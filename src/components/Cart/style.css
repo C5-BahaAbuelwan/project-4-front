@@ -1,0 +1,118 @@
+.ProductDetails {
+  position: relative;
+  border: 1px solid #ccc;
+  transform: scaleY(0.98);
+}
+.Cart_Page img {
+  max-width: 400px;
+  width: 100%;
+  margin: 20px;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+}
+
+.ProductDetails {
+  border: solid #ccc;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 50px;
+  font-size: 150%;
+}
+
+.Details_Container {
+  max-width: 500px;
+  width: 100%;
+  margin: 5px 20px;
+}
+.Details_Container p {
+  line-height: 1.5;
+  margin: 10px 0;
+  opacity: 0.8;
+}
+.Details_Container h2 {
+  text-transform: uppercase;
+  color: darkblue;
+  letter-spacing: 2px;
+  font-weight: 2rem;
+}
+.button_Container {
+  display: flex;
+  flex-direction: row;
+  
+  align-items: center;
+}
+.button_Container .total {
+  color: crimson;
+  padding: 0 20px;
+}
+
+.button_Container button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #777;
+}
+
+.subTotal {
+  width: 13%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #dc143c;
+}
+.emptyCart {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.empty_Cart {
+  color: #fff;
+  border: solid 1px rgb(4, 155, 155);
+  background: teal;
+  background: -moz-linear-gradient(top, #ffd700 0, #c8a000 100%);
+  background: -webkit-linear-gradient(top, #ffd700 0, #c8a000 100%);
+  background: -o-linear-gradient(top, #ffd700 0, #c8a000 100%);
+  background: -ms-linear-gradient(top, #ffd700 0, #c8a000 100%);
+  background: linear-gradient(top, #ffd700 0, #c8a000 100%);
+  border-radius: 5px;
+  padding: 2px;
+  width: 20%;
+  font-size: larger;
+  
+}
+
+.stripe {
+  padding: 7px 15px;
+  border-radius: 20px 3px 20px 4px;
+  /* moz-border-radius: 20px 3px 20px 4px; */
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.7);
+  font-size: 16px;
+  background-color: crimson;
+  color: white;
+  font-size: larger;
+}
+
+.delete_product {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  color: crimson;
+  font-weight: 900;
+  cursor: pointer;
+}
+.delete_product button {
+  color: #dc143c;
+  border: none;
+}
+
+.Cart_Page h1{
+  text-align: center;
+  color: darkblue;
+  margin: 10% 0 20% 0;
+}

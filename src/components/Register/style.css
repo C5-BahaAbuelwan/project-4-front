@@ -1,0 +1,43 @@
+.box{
+    position: relative;
+    top:50px;
+    display: grid;
+    grid-template-columns: 20% 50%;
+    grid-template-rows: 16.5% 16.5% 16.5% 16.5% 16.5% ;
+    grid-row-gap: 15px;
+}
+
+.register h1{
+    color: crimson;
+    margin-top: 2%;
+    
+}
+.register_button{
+    position: relative;
+    top:60px;
+    background-color: teal;
+    border: 1px double rgb(4, 160, 160);
+    border-radius: 5px;
+    width:20% ;
+    aspect-ratio: 1/.2;
+    color: antiquewhite;
+    font-size: 100%;
+    font-family: cursive;
+}
+.error{
+    position: relative;
+    top: 65px;
+}
+span{
+    color: red;
+}
+/* .register div {
+    display: flex;
+    flex-direction: row;
+} */
+
+/* .register .firstName_cont , .LastName_cont , .country_cont , .email_cont .password_cont {
+    display: flex;
+} */
+
+
